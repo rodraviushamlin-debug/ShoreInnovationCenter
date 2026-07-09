@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Assistant Eligibility Evaluator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header id="site-header">
+
+<a href="https://www.kennesaw.edu/ccse/" target="_blank">
+    <img src="img/ksu-logo.png"
+         alt="KSU Logo"
+         class="logo">
+</a>
+
+<h1>Robin and Doug Shore Innovation Center</h1>
+
+<nav>
+    <a class="menu-link" href="index.html">Home</a>
+    <a class="menu-link" href="labs.html">Facilities & Labs</a>
+    <a class="menu-link" href="research.html">Research</a>
+    <a class="menu-link" href="eligibility.html">Eligibility Evaluator</a>
+</nav>
+
+</header>
+
+<main>
+
+<section class="content-section">
+
+<h2>Summer Student Assistant Eligibility Evaluator</h2>
+
+<p>
+Complete the form below to determine whether you may qualify
+for a Summer Student Assistant position.
+</p>
+
+<form id="eligibilityForm">
+
+<label>Student Name</label>
+<input type="text" id="studentName">
+
+<label>Student Email</label>
+<input type="email" id="studentEmail">
+
+<label>Student Status</label>
+
+<select id="studentStatus" onchange="showCourses()">
+
+<option value="">Select Status</option>
+
+<option value="undergraduate">Undergraduate</option>
+
+<option value="graduate">Graduate</option>
+
+</select>
+
+<div id="courseSection"></div>
+
+<button type="button" onclick="evaluateEligibility()">
+Evaluate Eligibility
+</button>
+
+</form>
+
+<div id="result"></div>
+
+</section>
+
+</main>
+
+<footer>
+
+<p>
+This website is a student class project for IT 5443 Web Technologies
+at Kennesaw State University. It is not an official KSU website.
+</p>
+
+</footer>
+
+<script src="eligibility.js"></script>
+
+</body>
+</html>
