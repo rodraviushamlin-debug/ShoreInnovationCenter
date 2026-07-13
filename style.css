@@ -190,10 +190,303 @@ background:#f8f8f8;
 
 }
 /* Course section */
-#courseSection {
+* {
+    box-sizing: border-box;
+}
+
+
+/* General page styles */
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333333;
+    margin: 0;
+    line-height: 1.6;
+}
+
+
+/* Header and navigation */
+
+#site-header {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px 20px;
+}
+
+#site-header img {
+    display: block;
+    width: 120px;
+    height: auto;
+    margin: 0 auto 15px;
+}
+
+nav {
+    background-color: #ffd700;
+    padding: 15px 0;
+    margin: 0;
+    text-align: center;
+}
+
+.menu-link {
+    display: inline-block;
+    color: #000000;
+    text-decoration: none;
+    margin: 8px 15px;
+    font-weight: bold;
+}
+
+.menu-link:hover,
+.menu-link:focus {
+    color: #444444;
+    text-decoration: underline;
+}
+
+
+/* Main page content */
+
+main,
+.page-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #ffffff;
+}
+
+.content-section,
+.hero-section {
+    margin: 30px 0;
+    padding: 20px;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #1b365d;
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+}
+
+
+/* Tables */
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+caption {
+    padding: 12px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+th,
+td {
+    border: 1px solid #333333;
+    padding: 10px;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background-color: #1b365d;
+    color: #ffffff;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #1b365d;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #ffd700;
+}
+
+footer a:hover,
+footer a:focus {
+    color: #ffffff;
+}
+
+
+/* Forms */
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    margin: auto;
+}
+
+fieldset {
+    border: 1px solid #999999;
+    border-radius: 6px;
+    margin-bottom: 25px;
+    padding: 20px;
+}
+
+legend {
+    color: #1b365d;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0 8px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label,
+.group-label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="month"],
+select,
+textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #777777;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid rgba(255, 215, 0, 0.45);
+    border-color: #1b365d;
+}
+
+
+/* Radio buttons and checkboxes */
+
+.option-group,
+.checkbox-grid {
+    margin-top: 10px;
+}
+
+.option-group label,
+.checkbox-grid label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+    font-weight: normal;
+}
+
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+}
+
+
+/* Buttons */
+
+.form-buttons,
+.confirmation-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
     margin-top: 20px;
 }
 
+button,
+.primary-button,
+.secondary-button {
+    display: inline-block;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+button,
+.primary-button {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+button:hover,
+button:focus,
+.primary-button:hover,
+.primary-button:focus {
+    background-color: #444444;
+}
+
+.secondary-button {
+    background-color: #dddddd;
+    color: #000000;
+    border: 1px solid #555555;
+}
+
+.secondary-button:hover,
+.secondary-button:focus {
+    background-color: #bbbbbb;
+}
+
+.inline-button {
+    width: auto;
+}
+
+
+/* Eligibility course section */
+
+#courseSection {
+    margin-top: 20px;
+}
 #courseSection h3 {
     margin-bottom: 15px;
 }
@@ -211,4 +504,569 @@ background:#f8f8f8;
     padding: 8px;
     margin-bottom: 15px;
     font-size: 16px;
+}
+
+
+/* Eligibility result */
+
+.result-box {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.result-box:empty {
+    display: none;
+}
+
+.eligible {
+    background-color: #e8f8e8;
+    color: #174d17;
+    border: 2px solid #287a28;
+}
+
+.not-eligible {
+    background-color: #ffecec;
+    color: #7c0000;
+    border: 2px solid #a30000;
+}
+
+
+/* Milestone 3 application link */
+
+.hidden {
+    display: none;
+}
+
+.application-link {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #eef8ee;
+    border-left: 5px solid #287a28;
+}
+
+
+/* Validation messages */
+
+.required {
+    color: #a30000;
+}
+
+.form-help {
+    margin-top: 0;
+    color: #555555;
+    font-size: 0.95rem;
+}
+
+.error-message {
+    display: block;
+    min-height: 20px;
+    margin-top: 5px;
+    color: #a30000;
+    font-weight: bold;
+}
+
+.validation-summary {
+    display: none;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fff1f1;
+    color: #7c0000;
+    border: 2px solid #a30000;
+    font-weight: bold;
+}
+
+.validation-summary.visible {
+    display: block;
+}
+
+
+/* PHP validation page */
+
+.form-error-section {
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #fff1f1;
+    border: 2px solid #a30000;
+}
+
+.server-error-list {
+    color: #7c0000;
+}
+
+
+/* Confirmation page */
+
+.confirmation-message {
+    padding: 15px;
+    background-color: #eef8ee;
+    border-left: 5px solid #287a28;
+}
+
+.confirmation-table th {
+    width: 32%;
+}
+
+
+/* Mobile layout */
+
+@media screen and (max-width: 700px) {
+    main,
+    .page-container {
+        padding: 10px;
+    }
+
+    .content-section,
+    .hero-section {
+        padding: 12px;
+    }
+
+    .menu-link {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .checkbox-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-buttons,
+    .confirmation-actions {
+        flex-direction: column;
+    }
+
+    button,
+    .primary-button,
+    .secondary-button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .confirmation-table th,
+    .confirmation-table td {
+        display: block;
+        width: auto;
+    }
+
+    .confirmation-table th {
+        border-bottom: none;
+    }
+}
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main,
+.page-container {
+    width: 100%;
+    flex: 1;
+}
+
+footer {
+    margin-top: auto;
+}
+
+.content-section:first-child {
+    margin-top: 0;
+}
+
+.content-section:last-child {
+    margin-bottom: 0;
+}
+/* Smooth page scrolling */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Improve overall page background */
+
+body {
+    background:
+        linear-gradient(
+            to bottom,
+            #ececec 0,
+            #f7f7f7 260px,
+            #f4f4f4 100%
+        );
+}
+
+
+/* Header improvements */
+
+#site-header {
+    border-bottom: 5px solid #ffd700;
+}
+
+#site-header h1 {
+    margin: 10px 0 0;
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+}
+
+#site-header img {
+    transition: transform 0.25s ease;
+}
+
+#site-header img:hover {
+    transform: scale(1.04);
+}
+
+
+/* Navigation improvements */
+
+nav {
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu-link {
+    border-radius: 4px;
+    padding: 8px 12px;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.menu-link:hover,
+.menu-link:focus {
+    background-color: #000000;
+    color: #ffffff;
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+
+/* Main content container */
+
+main,
+.page-container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Section card design */
+
+.content-section,
+.hero-section,
+.form-section,
+.confirmation-section {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-left: 5px solid #1b365d;
+    border-radius: 7px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+}
+
+.content-section:hover {
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.11);
+}
+
+
+/* Heading design */
+
+h2 {
+    border-bottom: 3px solid #ffd700;
+    padding-bottom: 8px;
+}
+
+h3 {
+    color: #1b365d;
+}
+
+h2,
+h3 {
+    line-height: 1.3;
+}
+
+
+/* Paragraph improvements */
+
+p {
+    max-width: 75ch;
+}
+
+
+/* Hero image design */
+
+.hero-section img,
+.hero img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+
+/* Facility image design */
+
+.content-section img {
+    border-radius: 7px;
+    border: 1px solid #cccccc;
+    margin: 15px auto 20px;
+}
+
+
+/* Lists */
+
+.content-section ul,
+.content-section ol {
+    background-color: #f8f8f8;
+    border-left: 4px solid #ffd700;
+    border-radius: 4px;
+    padding: 18px 18px 18px 42px;
+}
+
+.content-section li {
+    margin-bottom: 8px;
+}
+
+.content-section li:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Table improvements */
+
+table {
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+caption {
+    background-color: #f4f4f4;
+    color: #1b365d;
+    border: 1px solid #cccccc;
+    border-bottom: none;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f7f7f7;
+}
+
+tbody tr:hover {
+    background-color: #fff8d6;
+}
+
+
+/* Form container */
+
+.application-form,
+#eligibilityForm {
+    background-color: #fafafa;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Form fields */
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="month"],
+select,
+textarea {
+    background-color: #ffffff;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+    border-color: #1b365d;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.3);
+}
+
+
+/* Fieldset design */
+
+fieldset {
+    background-color: #ffffff;
+    border-left: 5px solid #1b365d;
+}
+
+legend {
+    background-color: #ffffff;
+    border-radius: 4px;
+}
+
+
+/* Buttons */
+
+button,
+.primary-button,
+.secondary-button {
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+button:hover,
+button:focus,
+.primary-button:hover,
+.primary-button:focus,
+.secondary-button:hover,
+.secondary-button:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.primary-button {
+    border: 2px solid #000000;
+}
+
+.secondary-button {
+    border: 2px solid #555555;
+}
+
+
+/* Eligibility results */
+
+.result-box {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.eligible {
+    border-left-width: 7px;
+}
+
+.not-eligible {
+    border-left-width: 7px;
+}
+
+
+/* Application link design */
+
+.application-link {
+    border-radius: 6px;
+    box-shadow: 0 3px 12px rgba(40, 122, 40, 0.15);
+}
+
+.application-link h3 {
+    margin-top: 0;
+    color: #174d17;
+}
+
+
+/* Error and confirmation panels */
+
+.validation-summary,
+.form-error-section,
+.confirmation-message {
+    border-radius: 6px;
+}
+
+.error-message:empty {
+    display: none;
+}
+
+
+/* Footer improvements */
+
+footer {
+    border-top: 5px solid #ffd700;
+    box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.12);
+}
+
+footer p {
+    max-width: 900px;
+    margin: 8px auto;
+}
+
+
+/* Keyboard accessibility */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #ffd700;
+    outline-offset: 3px;
+}
+
+
+/* Tablet layout */
+
+@media screen and (max-width: 900px) {
+    main,
+    .page-container {
+        width: calc(100% - 30px);
+    }
+
+    #site-header h1 {
+        font-size: 1.7rem;
+    }
+}
+
+
+/* Mobile design improvements */
+
+@media screen and (max-width: 700px) {
+    #site-header {
+        padding: 18px 12px;
+    }
+
+    #site-header h1 {
+        font-size: 1.45rem;
+    }
+
+    #site-header img {
+        width: 95px;
+    }
+
+    nav {
+        padding: 10px;
+    }
+
+    main,
+    .page-container {
+        width: calc(100% - 20px);
+        margin-top: 15px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+    }
+
+    .content-section,
+    .hero-section,
+    .form-section,
+    .confirmation-section {
+        border-left-width: 4px;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    .application-form,
+    #eligibilityForm {
+        padding: 15px;
+    }
 }
